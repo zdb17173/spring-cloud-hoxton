@@ -1,6 +1,8 @@
 
 # nacos 配置服务
 
+配置服务结合nacos配置管理，可从nacos动态拉取配置至本地服务器。
+
 [nacos官网](https://nacos.io/)
 
 # 本地部署
