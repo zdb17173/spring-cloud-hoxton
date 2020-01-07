@@ -8,6 +8,8 @@
     <version>1.0</version>
     <modules>
         <module>nacos-spring-cloud-config-example</module>
+        <module>nacos-spring-cloud-discovery-provider-example</module>
+        <module>nacos-spring-cloud-discovery-consumer-example</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -26,10 +28,10 @@
         <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
 
         <maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
+        <org.apache.httpcomponents.version>4.5.10</org.apache.httpcomponents.version>
 
         <!--
         <com.fasterxml.jason.core.version>2.7.5</com.fasterxml.jason.core.version>
-        <org.apache.httpcomponents.version>4.5</org.apache.httpcomponents.version>
 
         <org.slf4j.version>1.7.21</org.slf4j.version>
         <logback.version>1.2.1</logback.version>
