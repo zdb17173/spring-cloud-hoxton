@@ -5,4 +5,5 @@
 所有服务端地址从nacos中拉取。
 
 demo中包含了get请求、post请求、post请求带文件三类接口的远端调用。
-使用feign config完成对feign的相关设置
+使用feign config完成对feign的相关设置。
+

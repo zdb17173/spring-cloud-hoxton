@@ -1,5 +1,6 @@
 package org.fran.springcloud.nacos.provider.example;
 
+import com.netflix.ribbon.proxy.annotation.Http;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -23,8 +24,8 @@ public class NacosProviderDemoApplication {
     @RestController
     public class EchoController {
         @GetMapping(value = "/echo/{string}")
-        public Result echo(@PathVariable("string") String string) {
-            return new Result("Hello Nacos Discovery " + string);
+        public Result echo(@PathVariable("string") String string, @RequestHeader("fran") String fran) {
+            return new Result("Hello Nacos Discovery " + string +  " header[" + fran + "]");
         }
 
         @PostMapping(value = "/post", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)

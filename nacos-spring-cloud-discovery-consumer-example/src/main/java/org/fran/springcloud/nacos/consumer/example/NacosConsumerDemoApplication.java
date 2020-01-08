@@ -10,6 +10,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.annotation.Resource;
 import java.io.File;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
@@ -22,11 +23,12 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 @RestController
 @EnableFeignClients
 public class NacosConsumerDemoApplication {
-	@Autowired
+	@Resource
 	HelloClient helloClient;
 
 	@RequestMapping("/")
 	public Result hello() {
+
 		Result r = helloClient.echo(System.currentTimeMillis() + "");
 		r.setType(200);
 
