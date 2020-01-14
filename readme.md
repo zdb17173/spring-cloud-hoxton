@@ -36,6 +36,8 @@ demo中使用了
 2. openfeign 服务间的客户端端负载均衡
 3. 
 
+运维
+1. [ansible](/ansible.md)来实现多服务器的部署、启动、停止。
 
 
 
