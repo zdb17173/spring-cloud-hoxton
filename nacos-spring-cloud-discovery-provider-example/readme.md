@@ -8,3 +8,45 @@
 
 
 
+测试 访问
+http://127.0.0.1:8081/echo/sdasad
+```json
+{
+"type": 0,
+"res": "Hello Nacos Discovery sdasad header[null]",
+"data": null
+}
+```
+
+
+http://127.0.0.1:8081/actuator/nacos-discovery 可查看actuator监看信息
+```json
+{
+"subscribe": [],
+"NacosDiscoveryProperties": {
+"serverAddr": "127.0.0.1:8848",
+"endpoint": "",
+"namespace": "",
+"watchDelay": 30000,
+"logName": "",
+"service": "nacos-producer",
+"weight": 1,
+"clusterName": "DEFAULT",
+"group": "DEFAULT_GROUP",
+"namingLoadCacheAtStart": "false",
+"metadata": {
+"preserved.register.source": "SPRING_CLOUD"
+},
+"registerEnabled": true,
+"ip": "192.168.17.181",
+"networkInterface": "",
+"port": 8081,
+"secure": false,
+"accessKey": "",
+"secretKey": "",
+"heartBeatInterval": null,
+"heartBeatTimeout": null,
+"ipDeleteTimeout": null
+}
+}
+```

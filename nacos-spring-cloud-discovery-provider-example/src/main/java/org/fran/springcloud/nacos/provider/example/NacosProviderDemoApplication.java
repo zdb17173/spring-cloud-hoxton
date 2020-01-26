@@ -24,7 +24,7 @@ public class NacosProviderDemoApplication {
     @RestController
     public class EchoController {
         @GetMapping(value = "/echo/{string}")
-        public Result echo(@PathVariable("string") String string, @RequestHeader("fran") String fran) {
+        public Result echo(@PathVariable("string") String string, @RequestHeader(value = "fran", required = false) String fran) {
             return new Result("Hello Nacos Discovery " + string +  " header[" + fran + "]");
         }
 
