@@ -1,0 +1,6 @@
+db:
+  url: test
+  age: 1
+
+user:
+  name: zdb-test

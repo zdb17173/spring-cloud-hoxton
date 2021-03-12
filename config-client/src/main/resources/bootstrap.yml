@@ -1,0 +1,30 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      name: app1
+      label:
+      profile: prod
+      fail-fast: true
+      discovery:
+        enabled: true
+        service-id: config-service
+      retry:
+        initial-interval: 1000
+        multiplier: 1.1
+        max-attempts: 6
+        max-interval: 2000
+
+eureka:
+  instance:
+    prefer-ip-address: true #自动获取非回路ip地址而非主机名进行实例注册，也可通过ip-address手动设置要使用的ip地址
+    lease-renewal-interval-in-seconds: 30 #续约更新时间间隔,默认值30，生产环境不要改
+    lease-expiration-duration-in-seconds: 90 #续约到期时间，默认值，生产环境不要改
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+    hostname: ${spring.cloud.client.ip-address}
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

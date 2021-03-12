@@ -1,0 +1,6 @@
+db:
+  url: prod
+  age: 1
+
+user:
+  name: zdb-prod
