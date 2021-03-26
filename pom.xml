@@ -31,8 +31,7 @@
 		<java.version>1.8</java.version>
         <logback.version>1.2.1</logback.version>
         <org.slf4j.version>1.7.21</org.slf4j.version>
-        <com.fasterxml.jason.core.version>2.12.1</com.fasterxml.jason.core.version>
-
+        <jackson.json.version>2.12.1</jackson.json.version>
         <spring-boot.version>2.2.1.RELEASE</spring-boot.version>
         <spring-cloud.version>Hoxton.SR10</spring-cloud.version>
 
@@ -40,7 +39,6 @@
         <org.apache.httpcomponents.version>4.5.10</org.apache.httpcomponents.version>
 
         <!--
-        <com.fasterxml.jason.core.version>2.7.5</com.fasterxml.jason.core.version>
 
         <org.slf4j.version>1.7.21</org.slf4j.version>
         <logback.version>1.2.1</logback.version>
@@ -85,19 +83,19 @@
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-core</artifactId>
-                <version>${com.fasterxml.jason.core.version}</version>
+                <version>${jackson.json.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
-                <version>${com.fasterxml.jason.core.version}</version>
+                <version>${jackson.json.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-annotations</artifactId>
-                <version>${com.fasterxml.jason.core.version}</version>
+                <version>${jackson.json.version}</version>
             </dependency>
 
             <!-- http client -->
