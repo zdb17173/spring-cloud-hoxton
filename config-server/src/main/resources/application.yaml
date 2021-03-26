@@ -4,7 +4,7 @@ spring:
   application:
     name: config-service
   profiles:
-    active: native
+    active: jdbc
 eureka:
   instance:
     prefer-ip-address: true #自动获取非回路ip地址而非主机名进行实例注册，也可通过ip-address手动设置要使用的ip地址
@@ -26,4 +26,36 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+
+---
+#jdbc
+spring:
+  profiles: jdbc
+  datasource:
+    url: jdbc:mysql://localhost:3306/cas?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: org.gjt.mm.mysql.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      maximum-pool-size: 20
+      hikari.max-lifetime: 30000
+      hikari.idle-timeout: 30000
+      data-source-properties:
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        cachePrepStmts: true
+        useServerPrepStmts: true
+  cloud:
+    config:
+      label: master
+      server:
+        jdbc: true
+        jdbc.sql: SELECT p.property_key , p.property_value FROM config_property p LEFT JOIN config_application a on a.id = p.app_id WHERE a.app_name = ? AND a.`profile` = ? AND a.label = ?
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+      #defaultZone: http://eureka-1.cloud.cgtn:7001/eureka/,http://eureka-2.cloud.cgtn:7001/eureka/,http://eureka-3.cloud.cgtn:7001/eureka/
 

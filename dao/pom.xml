@@ -9,36 +9,29 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>config-client</artifactId>
+    <artifactId>dao</artifactId>
 
     <properties>
+
+        <org.mybatis.spring.version>2.1.4</org.mybatis.spring.version>
+        <org.mybatis.version>3.5.6</org.mybatis.version>
+        <zaxxer.hikariCP.version>3.4.5</zaxxer.hikariCP.version>
+        <org.mysql.version>5.1.45</org.mysql.version>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
-        <junit.version>4.11</junit.version>
-        <java.version>1.8</java.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>org.fran.springcloud</groupId>
-            <artifactId>dao</artifactId>
-            <version>1.0</version>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${org.mysql.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>${org.mybatis.spring.version}</version>
         </dependency>
     </dependencies>
 

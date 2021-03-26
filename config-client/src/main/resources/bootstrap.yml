@@ -5,9 +5,9 @@ spring:
     name: config-client
   cloud:
     config:
-      name: app1
-      label:
-      profile: prod
+      name: db
+      label: master
+      profile: dev
       fail-fast: true
       discovery:
         enabled: true

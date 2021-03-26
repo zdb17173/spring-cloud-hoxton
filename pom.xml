@@ -18,6 +18,7 @@
         <module>netflix-eureka-provider-2</module>
         <module>netflix-eureka-feign-client</module>
         <module>config-client</module>
+        <module>dao</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -33,7 +34,7 @@
         <com.fasterxml.jason.core.version>2.10.1</com.fasterxml.jason.core.version>
 
         <spring-boot.version>2.2.1.RELEASE</spring-boot.version>
-        <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
+        <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
 
         <maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
         <org.apache.httpcomponents.version>4.5.10</org.apache.httpcomponents.version>
