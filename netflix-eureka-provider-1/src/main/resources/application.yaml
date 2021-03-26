@@ -1,0 +1,26 @@
+
+server:
+  port: 8001
+  tomcat:
+    basedir: "/data/apps/temp" #避免系统长时间空闲后报错
+
+swagger:
+  host: "localhost:8001"
+  title: "eureka-provider"
+
+spring:
+  application:
+    name: ribbon-service
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      maxRequestSize: 1024MB
+#  zipkin:
+#    base-url: http://localhost:9411
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

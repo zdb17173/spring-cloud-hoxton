@@ -13,7 +13,6 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
         <junit.version>4.11</junit.version>
         <java.version>1.8</java.version>
     </properties>

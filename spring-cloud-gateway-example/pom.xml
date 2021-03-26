@@ -12,7 +12,6 @@
     <artifactId>spring-cloud-gateway-example</artifactId>
 
     <properties>
-        <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
         <junit.version>4.12</junit.version>
     </properties>
 

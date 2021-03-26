@@ -34,7 +34,8 @@ Supported Boot Version: 2.2.1.RELEASE
 demo中使用了
 1. nacos 服务发现、配置管理，详细见 [nacos配置](/nacos-spring-cloud-config-example/readme.md). 
 2. openfeign 服务间的客户端端负载均衡
-3. 
+3. spring cloud config 配置管理，详细见[config服务配置](/config-server/readme.md).
+
 
 运维
 1. [ansible](/ansible.md)来实现多服务器的部署、启动、停止。
