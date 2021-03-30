@@ -1,14 +1,14 @@
 
-# spring-cloud-hoxton版本example
+# spring-cloud-hoxton版本demo
 
-[官方文档](https://cloud.spring.io/spring-cloud-static/Hoxton.RELEASE/reference/htmlsingle/#features)
+[官方文档](https://https://docs.spring.io/spring-cloud/docs/Hoxton.SR10/reference/html/)
 
 spring cloud提供了大量的工具和模型以支持分布式系统，以实现配置管理、服务发现、
 熔断保护、智能路由、代理等。
 
-Release Train Version: Hoxton.RELEASE
+Release Train Version: Hoxton.10
 
-Supported Boot Version: 2.2.1.RELEASE
+Supported Boot Version: 2.3.8.RELEASE
 
 通过以下spring cloud组件，可以完成上述的各种功能。
 
