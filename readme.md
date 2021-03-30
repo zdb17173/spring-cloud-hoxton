@@ -6,7 +6,7 @@
 spring cloud提供了大量的工具和模型以支持分布式系统，以实现配置管理、服务发现、
 熔断保护、智能路由、代理等。
 
-Release Train Version: Hoxton.10
+Release Train Version: Hoxton.SR10
 
 Supported Boot Version: 2.3.8.RELEASE
 
