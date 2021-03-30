@@ -67,6 +67,7 @@ create table config_application
    update_time          datetime,
    primary key (id)
 );
+ALTER TABLE `config_application` ADD UNIQUE INDEX `UNIQUE_KEY` (`app_name`, `profile`, `label`); 
 
 /*==============================================================*/
 /* Table: config_property                                       */
@@ -129,7 +130,6 @@ insert into `auth_user` (`id`, `name`, `account`, `foreign_name`, `email`, `phon
 
 ```
 
-
 启动服务后访问以下地址，可获得
 http://127.0.0.1:7100/db/dev
 ```json
@@ -161,6 +161,30 @@ http://127.0.0.1:7100/db/dev
     ]
 }
 ```
+## 通过单元测试同步配置到数据库
+
+运行YamlImportTest.java，可将test/resources/repo目录下的所有配置文件扫描
+同步到mysql db中。
+
+文件命名中包含了appname、profile、label三部分，三部分以`-`做为分隔
+- application不可为空
+- 默认profile为profile  
+- 默认label为master  
+
+例如：
+```yaml
+appname-profile-label.yaml   
+appname-profile.yaml  
+appname.yaml
+```
+
+
+
+文件格式支持：  
+- yaml 
+- yml 
+- properties
+
 
 
 # config-client
